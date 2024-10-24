@@ -7,7 +7,7 @@ const AdminDashboard = () => {
 
   const fetchAdminDB = async () => {
     try {
-      const resp = await axios.get('http://localhost:3000/dashboard'); // Replace with your actual API endpoint
+      const resp = await axios.get('https://dex-n-devs.onrender.com/dashboard'); // Replace with your actual API endpoint
       setGetData(resp.data.data); // Set the fetched data
       console.log(resp)
     } catch (err) {

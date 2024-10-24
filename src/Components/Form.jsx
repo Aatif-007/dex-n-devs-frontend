@@ -16,7 +16,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const resp = await axios.post("http://localhost:3000/message", form);
+      const resp = await axios.post("https://dex-n-devs.onrender.com/message", form);
       console.log(resp.data);
       toast.success(resp.data.message,{position:"top-center"});
       setForm({ name: "", email: "", contact: "", message: "" });
