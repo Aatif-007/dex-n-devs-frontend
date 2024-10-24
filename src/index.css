@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Arizonia&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Arizonia&family=Jost:ital,wght@0,100..900;1,100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+  font-family: "Jost", sans-serif
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dexs{
+  font-family: Akronim;
+
+}
+
+.n{
+  font-family: Arizonia;
+
+
+}
+.devs{
+  font-family: K2D;
+
+}
+
+.contact-styling{
+   background: linear-gradient(135deg, #BC78EC 0%, #3B2667 100%);
+
+}
+.glow {
+  text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 15px rgba(255, 255, 255, 0.979),
+      0 0 20px rgba(66, 38, 132, 1),
+      0 0 25px rgba(255, 255, 255, 0.897);
+}
+
+
+/* Clients animations */
+.clients-container {
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9; /* Background color */
+  padding: 20px; /* Space inside the box */
+  border-radius: 10px; /* Rounded corners */
+  border-top: 2px dashed #BC78EC; /* Dashed border on top */
+  border-bottom: 2px dashed #BC78EC; /* Dashed border on bottom */
+  padding-left: 10px; /* Extra padding to start logos from the beginning */
+}
+
+.scrolling-logos {
+  display: flex;
+  animation: scroll 2s linear infinite; /* Fast scrolling effect */
+}
+
+.logo {
+  width: 200px; /* Fixed width */
+  height: 250px; /* Fixed height */
+  margin: 0 10px; /* Space between logos */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move the full width of the first set of logos */
+  }
+}
+*{
+  scroll-behavior: smooth;
+}
