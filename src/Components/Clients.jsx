@@ -25,12 +25,18 @@
 //   ];
 
 //   return (
-//     <div className="clients-container">
-//       <div className="scrolling-logos">
-//         {/* Render logos twice for continuous scrolling */}
-//         {logos.concat(logos).map((logo, index) => (
-//           <img key={index} className='logo' src={logo} alt={`Logo ${index + 1}`} />
-//         ))}
+//     <div>
+//       <h1 className="uppercase my-10 text-center text-primary text-2xl md:text-5xl font-bold">Our clients</h1>
+//       <div className="overflow-hidden py-5">
+//         <div className="flex animate-marquee space-x-8">
+//           {logos.map((logo, index) => (
+//             <img key={index} className="logo h-16 w-auto object-contain" src={logo} alt={`Logo ${index + 1}`} />
+//           ))}
+//           {/* Render logos twice for seamless scrolling */}
+//           {logos.map((logo, index) => (
+//             <img key={`copy-${index}`} className="logo h-16 w-auto object-contain" src={logo} alt={`Logo ${index + 1} Copy`} />
+//           ))}
+//         </div>
 //       </div>
 //     </div>
 //   );
@@ -38,7 +44,7 @@
 
 // export default Clients;
 
-
+// src/components/Clients.js
 import React from 'react';
 import adventure from '../assets/Clients/adventure.logo.jpg';
 import cafe from '../assets/Clients/cafe.logo.jpg';
@@ -66,19 +72,13 @@ const Clients = () => {
   ];
 
   return (
-    <div>
-        <h1 className='uppercase my-10 text-center text-primary text-2xl md:text-5xl font-bold'>Our clients</h1>
-    <div className="clients-container my-5">
-      <div className="scrolling-logos">
-        {/* Render logos twice for seamless scrolling */}
-        {logos.map((logo, index) => (
-          <img key={index} className='logo' src={logo} alt={`Logo ${index + 1}`} />
-        ))}
-        {logos.map((logo, index) => (
-          <img key={`copy-${index}`} className='logo' src={logo} alt={`Logo ${index + 1} Copy`} />
+    <div className="overflow-hidden py-5 bg-white">
+      <h1 className="uppercase my-10 text-center text-primary text-2xl md:text-5xl font-bold">Our Clients</h1>
+      <div className="flex space-x-8 animate-marquee">
+        {[...logos, ...logos].map((logo, index) => (
+          <img key={index} className="h-16 w-auto object-contain" src={logo} alt={`Logo ${index + 1}`} />
         ))}
       </div>
-    </div>
     </div>
   );
 };
