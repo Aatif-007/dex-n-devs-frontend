@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import Heros from "../assets/vectors/Saly-10 (1).png"
 
 const Hero = () => {
 
@@ -21,7 +22,7 @@ const Hero = () => {
         </div>
 
         <div className="flex-row md:w-full ">
-          <img src={'https://s3-alpha-sig.figma.com/img/8c08/e116/254eca5f17b913c874afb12ee4949f89?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G88-rnvppSf9-8XwcEAaz1GShXZAks3uYDo8d1QN2kB7TC6OIEYvLh9DVfe63LKWGengp9Ly3H83S4Ei2SXSTzpUwD0beB5hdyqRWpWP7xXbhiPCnHZRWePXtc0BhXCArGiPtslOelnjvYa9S9tNW67H~CTx950ELQ7eOc2OiJGfkg-iwBe8OEAwRVSoKl0xFeds9ISj7h~YJOpBnoer11yhKESxcxJrEbz4s2uhcJs2E-ycWllxiPF~TNLZnJkHW-2uh0pOacekvyJugjOhg8OsFrjFLWwpt~J~TEPU7A87c54F4Dapo999VtwyG~OKBxVUz1gO6MWQEO7XbAuLMg__'} className="w-full" />
+          <img src={Heros} className="w-full" />
         </div>
       </div>
     </div>

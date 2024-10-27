@@ -62,7 +62,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 type="text"
-                className="w-full flex-row md:w-full rounded-md text-black"
+                className="w-full flex-row md:w-full rounded-md focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-10 px-2 text-white"
                 required // Optional: Add required attribute
               />
             </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                   value={form.email}
                   type="email" // Change to type="email" for validation
                   onChange={handleChange}
-                  className="w-full rounded-md text-black"
+                  className="w-full rounded focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-10 px-2 text-white"
                   required // Optional: Add required attribute
                   
 
@@ -89,7 +89,7 @@ const Contact = () => {
                   value={form.contact}
                   name="contact"
                   onChange={handleChange}
-                  className="w-full rounded-md text-black"
+                  className="w-full rounded-md focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-10 px-2 text-white"
                   required // Optional: Add required attribute
                   maxLength={10}
                   minLength={10}
@@ -99,13 +99,14 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
+              
               value={form.message}
               onChange={handleChange}
-              className="w-full md:w-full h-12 text-black"
+              className="w-full md:w-full focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-20 px-2 text-white"
               required // Optional: Add required attribute
             ></textarea>
             <button
-              className="w-full md:w-full text-white font-semibold rounded-lg py-2 mt-4"
+              className="w-full md:w-full text-white font-semibold rounded-lg py-2 mt-4 "
               style={{ backgroundColor: "#ED80FD" }}
               type="submit" // Ensure it's a submit button
             >
@@ -121,3 +122,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

@@ -46,12 +46,32 @@ const Expertise = () => {
       </div>
       <h1 className='text-primary text-4xl font-semibold mb-8 mt-4 z-10 relative'>Our Expertise</h1>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 relative z-10">
-        {serviceData.map((i) => (
+        {/* {serviceData.map((i) => (
           <div className="border flex-col items-center justify-center p-5 border-[#997AF1] backdrop-blur-md rounded-xl mx-3 my-2" key={i.id}>
             <img className='w-52 h-56 mx-auto' src={i.image} alt='Image is loading ...' />
             <p className='text-center text-2xl font-medium text-primary'>{i.text}</p>
           </div>
-        ))}
+        ))} */}
+        {serviceData.map((i) => (
+        <div
+          key={i.id}
+          className="border cursor-wait flex-col items-center justify-center p-5 border-[#997AF1] backdrop-blur-md rounded-xl mx-3 my-2 group"
+        >
+          {/* Image */}
+          <img
+            className="w-52 h-56 mx-auto transition-opacity duration-300 group-hover:opacity-0"
+            src={i.image}
+            alt="Image is loading ..."
+          />
+          <p className='text-center font-medium text-primary text-lg'>{i.text}</p>
+
+          {/* Text - shown on hover */}
+          <p className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-xs font-medium text-primary bg-white bg-opacity-80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-xl px-2">
+            {i.desc}
+          </p>
+        </div>
+      ))}
+
       </div>
       <div className="top-1 z-10 relative">
         <Square />
