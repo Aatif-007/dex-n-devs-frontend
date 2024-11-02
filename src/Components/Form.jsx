@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // Correct import for useState
+import React, { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,31 +10,32 @@ const Contact = () => {
     contact: "",
     message: "",
   });
-
-  
+  const [loading, setLoading] = useState(false); // New loading state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when submission starts
     try {
       const resp = await axios.post("https://dex-n-devs.onrender.com/message", form);
       console.log(resp.data);
-      toast.success(resp.data.message,{position:"top-center"});
+      toast.success(resp.data.message, { position: "top-center" });
       setForm({ name: "", email: "", contact: "", message: "" });
     } catch (error) {
       if (error.response) {
-        toast.error(error.message)
+        toast.error(error.message);
       } else if (error.request) {
-        toast.error("No response received:", error.request , {position : "top-center"});
+        toast.error("No response received:", error.request, { position: "top-center" });
       } else {
-        toast.error("Error message:", error.message,{position : "top-center"});
+        toast.error("Error message:", error.message, { position: "top-center" });
       }
+    } finally {
+      setLoading(false); // Set loading to false once submission is done
     }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
-     // This will log the old state because state updates are asynchronous
   };
 
   return (
@@ -63,7 +64,7 @@ const Contact = () => {
                 onChange={handleChange}
                 type="text"
                 className="w-full flex-row md:w-full rounded-md focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-10 px-2 text-white"
-                required // Optional: Add required attribute
+                required
               />
             </div>
             <div className="md:flex items-center justify-start gap-3">
@@ -73,24 +74,22 @@ const Contact = () => {
                 <input
                   name="email"
                   value={form.email}
-                  type="email" // Change to type="email" for validation
+                  type="email"
                   onChange={handleChange}
                   className="w-full rounded focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-10 px-2 text-white"
-                  required // Optional: Add required attribute
-                  
-
+                  required
                 />
               </div>
               <div className="md:w-1/2 my-3">
                 <label htmlFor="contact">Contact</label>
                 <br />
                 <input
-                  type="tel" // Change to type="tel" for better input handling
+                  type="tel"
                   value={form.contact}
                   name="contact"
                   onChange={handleChange}
                   className="w-full rounded-md focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-10 px-2 text-white"
-                  required // Optional: Add required attribute
+                  required
                   maxLength={10}
                   minLength={10}
                 />
@@ -99,28 +98,30 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
-              
               value={form.message}
               onChange={handleChange}
               className="w-full md:w-full focus:shadow-md focus:ring-offset-rose-600 bg-[#FFFFFF1F] outline-none h-20 px-2 text-white"
-              required // Optional: Add required attribute
+              required
             ></textarea>
             <button
-              className="w-full md:w-full text-white font-semibold rounded-lg py-2 mt-4 "
+              className="w-full md:w-full text-white font-semibold rounded-lg py-2 mt-4 flex justify-center items-center"
               style={{ backgroundColor: "#ED80FD" }}
-              type="submit" // Ensure it's a submit button
+              type="submit"
+              disabled={loading} // Disable the button when loading
             >
-              Book a free call
+              {loading ? (
+                <div className="spinner-border animate-spin border-t-2 border-white rounded-full w-5 h-5 mr-2"></div>
+              ) : (
+                "Book a free call"
+              )}
             </button>
           </form>
         </div>
       </div>
-      <ToastContainer  />
+      <ToastContainer />
       <hr className="mx-16 mt-4" />
     </div>
   );
 };
 
 export default Contact;
-
-
