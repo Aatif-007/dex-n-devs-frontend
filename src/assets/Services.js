@@ -29,7 +29,7 @@ export const ServiceData = [
     {
         id : 5,
         text : "Custom Solutions",
-        image : "https://s3-alpha-sig.figma.com/img/ff86/4153/8d0b3da488e360fcb93103240156f714?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fgFCIpi6VL-TPu89dU3DBw42xryS-i5U7eg6nfEHT0wWRdD3S1~8qEn~Vlbg-wOTqRVaEx7W1PGkgB5rcIsOENw-qywXQ5ggFviX9JgjZFs76sTpvdLXP38qMoafeHEFAgJWQntUQ2aYQSwgkdVhQulfZ6wN5Cxq1djWstCuEMoi9ajwL0blILR4CykJQhKhLs0wgJ5QDyfJEou8igEYxSZ2yyXyiXR41gUh6ufw73oeR3owjFsEfNIaAgzLRmqOKelOXgRUjpeW0ziSu~LRQsKYMo15ZXdq6FsX606GlM8ep0I5Rt~qkQA8-JfTjEH84yEow-cqmgk9ICb5d~3eBA__",
+        image : "https://s3-alpha-sig.figma.com/img/ff86/4153/8d0b3da488e360fcb93103240156f714?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fo3MfCxQtqYSNthyVMPGRjbO98w~MA9wjOkWraI7s3N27jRZtIt5PKJEyXW~-Q5mMc363BC6wAJOqZ2lnkuDTom2rgDHHHLX3PjLx96iIFUEfekXUD5JCIgMxGeWtDmjbsbhYHh6rKIdyHBfhV8s5pARVJkuuvEK7xn~fd3VEYOJLcuz8HouNNR-AjVM8aIoDQKxOuRR1biagYfsKTKn3kBJuLB-o5mv6O~O1vZnR6BIOIfHOmZ~wfxg7KtNl3kHAn2SwAcN9BoqYPu~jT76NTu8KzrhdKPi-vEKSaHnlo176EhH~rcRGeuUkeYNxnwxkSJxXG6w-pAKJ-FrbjP~rA__",
         desc : "At dexNdevs, we specialize in creating bespoke solutions tailored to address your unique business challenges. Our team harnesses innovative technologies and personalized strategies to optimize your operations and drive growth. We pride ourselves on delivering results that perfectly align with your specific goals and needs"
     },
     {
