@@ -1,4 +1,4 @@
-
+import imagyy from '../assets/ExpertiseImages/Saly-44 (1).png'
 
 export const ServiceData = [
     {
@@ -29,7 +29,7 @@ export const ServiceData = [
     {
         id : 5,
         text : "Custom Solutions",
-        image : "https://s3-alpha-sig.figma.com/img/ff86/4153/8d0b3da488e360fcb93103240156f714?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fo3MfCxQtqYSNthyVMPGRjbO98w~MA9wjOkWraI7s3N27jRZtIt5PKJEyXW~-Q5mMc363BC6wAJOqZ2lnkuDTom2rgDHHHLX3PjLx96iIFUEfekXUD5JCIgMxGeWtDmjbsbhYHh6rKIdyHBfhV8s5pARVJkuuvEK7xn~fd3VEYOJLcuz8HouNNR-AjVM8aIoDQKxOuRR1biagYfsKTKn3kBJuLB-o5mv6O~O1vZnR6BIOIfHOmZ~wfxg7KtNl3kHAn2SwAcN9BoqYPu~jT76NTu8KzrhdKPi-vEKSaHnlo176EhH~rcRGeuUkeYNxnwxkSJxXG6w-pAKJ-FrbjP~rA__",
+        image : imagyy,
         desc : "At dexNdevs, we specialize in creating bespoke solutions tailored to address your unique business challenges. Our team harnesses innovative technologies and personalized strategies to optimize your operations and drive growth. We pride ourselves on delivering results that perfectly align with your specific goals and needs"
     },
     {

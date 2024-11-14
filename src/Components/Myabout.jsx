@@ -1,4 +1,4 @@
-
+import sideImage from "../assets/Satisfaction/Saly-13.png"
 const MyAbout = () => {
   return (
     <div
@@ -18,7 +18,7 @@ const MyAbout = () => {
           </p>
         </div>
         <div className="right w-[90%] md:w-4/12">
-          <img src={"https://s3-alpha-sig.figma.com/img/2527/1f89/b420648cc0ce460437a0da116c04e1a5?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LwUEtKYk3xDO~3VpEBhFgChJ5xbf0Xdk75omE24FlTz~T0UWNSUIB~6-WvAWq61nKCo08nc3aEdV5~Aslv5RcqciPf2n~gvLnAJ21Vw~Mzu9gyLrvVm6lJ15Pmno82zDOyAOktC8uQ5V5EbWRmuRWLcO3A4HO1Hvy5JvtgpyrQV~5nr7iDXajEctbUpITlz4213i5PPzK2PomiwdO0-2aDgffv7OsT~v-Xhg9EZ-n0OnvV02~TESqK-wfoG7QVWZS1ziTBS2wvLej9wAp-7ZeWzKRRxa7NStRbdgIT-j8xVmiIzVliYm0sWFyJvC7LGU60q~DvNhEisDlHOvhv1NIw__"} className="w-full animate-pulse"  alt="Loading img..." />
+          <img src={sideImage} className="w-full animate-pulse"  alt="Loading img..." />
         </div>
       </div>
     </div>
